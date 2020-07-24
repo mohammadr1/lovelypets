@@ -1,0 +1,79 @@
+html {
+	position: absolute;
+	overflow-x: hidden !important;
+	width: 100% !important; 
+}
+
+body {
+	overflow-x: hidden !important;
+	width: 100% !important;
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 100% !important;
+	}
+}
+
+@media (min-width: 576px)
+.container {
+    max-width: 720px;
+}
+
+@font-face {
+	font-family: BYekan;
+	font-style: normal;
+	font-weight: normal;
+	src: url('../Fonts/BYekan.woff') format('woff');
+}
+
+
+.byekan {
+    font-family: BYekan;
+}
+
+/* Layout Styles */
+/* html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-size: 16px;
+	font-family: sans-serif;
+} */
+
+/* .card-list {
+	display: block;
+	margin: 1rem auto;
+	padding: 0;
+	font-size: 0;
+	text-align: center;
+	list-style: none;
+} */
+
+.cardItem {
+	display: inline-block;
+	width: 100%;
+	/* max-width: 20rem; */
+	font-size: 1rem;
+	text-decoration: none;
+	overflow: hidden;
+	box-shadow: 0 0 .5rem 0 rgba(0,0,0,0.1);
+	transition: transform .5s ease-in-out, box-shadow .5s;
+}
+
+.cardItem:hover {
+	transform: translateY(-0.5rem) scale(1.0125);
+	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+}
+
+.card-description {
+	display: block;
+	padding: 1em 0.5em;
+	color: #515151;
+	text-decoration: none;
+}
+
+.brd-m{
+	transform: translateY(-0.5rem) scale(1.0125);
+	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+}
