@@ -56,7 +56,7 @@
                 <td>{{$comment->id}}</td>
                 <td><?php echo mb_substr(strip_tags($comment->body),0,30,'utf8').' ... ' ?></td>
                 <td>{{$comment->name}}</td>       
-                <td></td>       
+                <td>{{$comment->article->title}}</td>       
                 <td>{!! jdate($comment->created_at)->format('d / m / Y') !!}</td>       
                 <td>{!!$status!!}</td>
                 <td>
