@@ -55,6 +55,7 @@
                 @default
               @endswitch
 
+
               <tr class="text-center">
                 <td>{{$article->id}}</td>
                 <td>{{$article->title}}</td>

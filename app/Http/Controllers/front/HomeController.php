@@ -23,40 +23,40 @@ class HomeController extends Controller
             ->join('article_category', 'articles.id', '=', 'article_category.article_id')
             ->join('categories', 'categories.id', '=', 'article_category.category_id')
             ->select('articles.*', 'categories.name')
-            ->where('name',"سگ")->limit(3)->get();
+            ->where('name',"سگ")->limit(3)->where('status',1)->get();
 
             $article_Cat = DB::table('articles')
             ->join('article_category', 'articles.id', '=', 'article_category.article_id')
             ->join('categories', 'categories.id', '=', 'article_category.category_id')
             ->select('articles.*', 'categories.name')
-            ->where('name',"گربه" )->limit(3)->get();
+            ->where('name',"گربه" )->limit(3)->where('status',1)->get();
 
             $article_Parande = DB::table('articles')
             ->join('article_category', 'articles.id', '=', 'article_category.article_id')
             ->join('categories', 'categories.id', '=', 'article_category.category_id')
             ->select('articles.*', 'categories.name')
-            ->where('name',"پرندگان" )->limit(1)->get();
+            ->where('name',"پرندگان" )->limit(1)->where('status',1)->get();
 
             $article_Khazande = DB::table('articles')
             ->join('article_category', 'articles.id', '=', 'article_category.article_id')
             ->join('categories', 'categories.id', '=', 'article_category.category_id')
             ->select('articles.*', 'categories.name')
-            ->where('name',"خزندگان" )->limit(1)->get();
+            ->where('name',"خزندگان" )->limit(1)->where('status',1)->get();
 
             $article_Javande = DB::table('articles')
             ->join('article_category', 'articles.id', '=', 'article_category.article_id')
             ->join('categories', 'categories.id', '=', 'article_category.category_id')
             ->select('articles.*', 'categories.name')
-            ->where('name',"جوندگان" )->limit(1)->get();
+            ->where('name',"جوندگان" )->limit(1)->where('status',1)->get();
 
 
             $articleAll = Article::orderBy('id')->get();
             $ArticleRand = rand(1,count($articleAll));
             $articleNewRand = $articleAll->where('id', $ArticleRand);
 
-            $articles_New = Article::orderBy('id', 'DESC')->where('status', 1)->limit(3)->get();
+            $articles_New = Article::orderBy('id', 'DESC')->where('status', 1)->limit(3)->where('status',1)->get();
 
-            $articles_Popular = Article::orderBy('hit', 'DESC')->where('status', 1)->limit(3)->get();
+            $articles_Popular = Article::orderBy('hit', 'DESC')->where('status', 1)->limit(3)->where('status',1)->get();
 
 
             $menus = Menu::orderBy('role')->where('status', 1)->get();
